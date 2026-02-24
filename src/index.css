@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1e3f20;
+  /* Deep forest green */
+  --primary-light: #2c592f;
+  --secondary: #e9e5df;
+  /* warm cream/beige */
+  --accent: #cfa861;
+  /* elegant muted gold */
+  --background: #fdfcf9;
+  /* very light warm off-white */
+  --text: #2a2c2a;
+  /* almost black with green tint */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, var(--background), var(--secondary));
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  @keyframes scan-line {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  .animate-scan-line {
+    animation: scan-line 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}
