@@ -67,7 +67,7 @@ function App() {
       setShowCamera(true);
       setError(null);
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "environment" }
+        video: { facingMode: "user" }
       });
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
