@@ -398,13 +398,13 @@ function App() {
                   </div>
                 )}
 
-                <div className="flex gap-4 justify-center w-full max-w-md">
+                <div className="flex gap-2 md:gap-4 justify-center w-full max-w-md">
                   {!isProcessing && !result && (
                     <button
                       onClick={handleAnalyze}
-                      className="flex-1 bg-[var(--primary)] hover:bg-[#152e17] text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all flex items-center justify-center gap-3 shadow-lg shadow-[var(--primary)]/30 hover:-translate-y-1"
+                      className="flex-[1.5] bg-[var(--primary)] hover:bg-[#152e17] text-white px-2 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-semibold text-sm md:text-lg transition-all flex items-center justify-center gap-1.5 md:gap-3 shadow-lg shadow-[var(--primary)]/30 hover:-translate-y-1"
                     >
-                      <Sparkles className="h-6 w-6" />
+                      <Sparkles className="h-4 w-4 md:h-6 md:w-6 shrink-0" />
                       Get AI Diagnosis
                     </button>
                   )}
@@ -412,9 +412,9 @@ function App() {
                   {!isProcessing && (
                     <button
                       onClick={resetScanner}
-                      className="bg-gray-50 hover:bg-gray-100 text-gray-700 px-6 py-4 rounded-2xl font-semibold transition-all flex items-center justify-center gap-2 border border-gray-200 shadow-sm"
+                      className="flex-1 bg-gray-50 hover:bg-gray-100 text-gray-700 px-2 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl font-semibold text-sm md:text-base transition-all flex items-center justify-center gap-1.5 md:gap-2 border border-gray-200 shadow-sm"
                     >
-                      <RefreshCw className="h-5 w-5" />
+                      <RefreshCw className="h-4 w-4 md:h-5 md:w-5 shrink-0" />
                       Retake
                     </button>
                   )}
