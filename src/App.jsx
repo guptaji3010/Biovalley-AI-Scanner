@@ -457,8 +457,8 @@ function App() {
                         </div>
 
                         <div className="flex-1 min-w-0 pr-1 md:pr-2">
-                          <div className="font-serif text-base md:text-xl leading-snug md:leading-normal text-[var(--primary)] group-hover:text-[var(--accent)] transition-colors line-clamp-2">{prod.name}</div>
-                          {prod.description && <div className="text-[11px] md:text-sm text-gray-500 mt-1 line-clamp-1 md:line-clamp-2 font-light">{prod.description}</div>}
+                          <div className="font-serif text-sm md:text-xl leading-tight md:leading-normal text-[var(--primary)] group-hover:text-[var(--accent)] transition-colors md:line-clamp-2">{prod.name}</div>
+                          {prod.description && <div className="text-[10px] md:text-sm text-gray-500 mt-0.5 md:mt-1 font-light md:line-clamp-2">{prod.description}</div>}
                         </div>
 
                         {prod.price && (
