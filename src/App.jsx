@@ -449,22 +449,22 @@ function App() {
                   </h4>
                   <div className="space-y-4 flex-1">
                     {result.recommendations.map((prod, idx) => (
-                      <a key={idx} href={prod.url} target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-[var(--accent)] group relative overflow-hidden">
+                      <a key={idx} href={prod.url} target="_blank" rel="noreferrer" className="flex items-center gap-3 md:gap-4 bg-white p-3 md:p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-[var(--accent)] group relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[var(--primary)] to-[var(--accent)] transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
 
-                        <div className="w-12 h-12 rounded-full bg-[var(--secondary)]/30 flex items-center justify-center shrink-0 border border-[var(--secondary)] text-[var(--primary)] font-serif font-bold text-xl group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[var(--secondary)]/30 flex items-center justify-center shrink-0 border border-[var(--secondary)] text-[var(--primary)] font-serif font-bold text-lg md:text-xl group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                           {idx + 1}
                         </div>
 
-                        <div className="flex-1 min-w-0 pr-2">
-                          <div className="font-serif text-xl text-[var(--primary)] group-hover:text-[var(--accent)] transition-colors truncate">{prod.name}</div>
-                          {prod.description && <div className="text-sm text-gray-500 mt-1 line-clamp-1 font-light">{prod.description}</div>}
+                        <div className="flex-1 min-w-0 pr-1 md:pr-2">
+                          <div className="font-serif text-base md:text-xl leading-snug md:leading-normal text-[var(--primary)] group-hover:text-[var(--accent)] transition-colors line-clamp-2">{prod.name}</div>
+                          {prod.description && <div className="text-[11px] md:text-sm text-gray-500 mt-1 line-clamp-1 md:line-clamp-2 font-light">{prod.description}</div>}
                         </div>
 
                         {prod.price && (
                           <div className="shrink-0 text-right">
-                            <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">Price</div>
-                            <div className="text-lg font-bold text-[var(--primary)]">{prod.price}</div>
+                            <div className="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider mb-0.5 md:mb-1">Price</div>
+                            <div className="text-sm md:text-lg font-bold text-[var(--primary)]">{prod.price}</div>
                           </div>
                         )}
                       </a>
